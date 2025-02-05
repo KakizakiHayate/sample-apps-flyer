@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'config/appsflyer_config.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AppsFlyerConfig.initializeSDK();
   runApp(const MyApp());
 }
 
